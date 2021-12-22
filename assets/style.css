@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
+}
+
+:root {
+    --dark: rgb(55, 55, 75);
+    --light: rgb(130, 245, 245);
+}
+/*****will not display in desktop*****/
+h1.sb-mobile {
+    display: none;
+}
+/**************************************/
+
+/***************Desktop***************/
+
+/*******Header********/
+
+header {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+h1.top {
+    background-color: var(--light);
+    color: var(--dark);
+    align-self: flex-start;
+    margin-bottom: 0.5em;
+}
+
+nav#head {
+    background-color: var(--dark);
+    color: var(--light);
+    align-self: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav#head a {
+    align-self: ;
+    margin: 0 5px 5px 5px;
+    background-color: var(--dark);
+    color: var(--light);
+    border-bottom: 2px solid rgb(130, 245, 245);
+}
+
+nav#head a:link {
+    text-decoration: none;
+    color: var(--light);
+}
+
+nav#head a:visited {
+    text-decoration: none;
+    color: var(--light);
+}
+
+div#bi1 {
+    height: 5em;
+    width: 100%;
+    background: url(./images/wall-bluegreen.jpg) no-repeat lightseagreen;
+    background: cover;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+div#bi1 h2{
+    background-color: var(--light);
+    color: var(--dark);
+    align-self: flex-end;
+    margin: 0 0.5em 0.5em 0;
+}
+
+/**********Main*********/
+
+main {
+    display: inline-flex;
+    flex-flow: row wrap;
+    height: 100%;
+}
+
+/* aside#about1 {
+    height: 10em;
+} */
+
+h1.sb {
+    border-right: 3px solid var(--dark);
+    width: 150px;
+    align-self: stretch;
+    padding: 0.5em;
+    border:1px solid black;
+}
+
+section.main-p1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+p {
+    /* border: 1px solid black; */
+    width: 60%;
+    margin: 1em 3em;
+}
+
+/* aside#work2 {
+    height: 30em;
+} */
+
+div.big {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+a.cap {
+    width: 60%;
+}
+
+#sec2 {
+    display: flex;
+    border: 5px solid var(--light);
+    width: 100%;
+    height: 15em;
+    background-image: url(./images/first_app.png);
+    z-index: 1;
+    margin: 0 3em;
+}
+
+.smallboxes1, .smallboxes2 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+#si1, #si3 {
+    margin: 1em 1em 0 3em;
+}
+
+#si2, #si4 {
+    margin-top: 1em; 
+}
+
+a.cap2 {
+    width: 29%;
+}
+
+section.main-p {
+    display: flex;
+    border: 5px solid var(--light);
+    width: 100%;
+    height: 7em;
+}
+
+#sec3 {
+    background-image: url(./images/second_app2.png);
+}
+
+#sec4 {
+    background-image: url(./images/third_app.png);
+}
+
+#sec5 {
+    background-image: url(./images/fourth_app.png);
+}
+
+#sec6 {
+    background-image: url(./images/wall-bluegreen.jpg);
+}
+
+/*image captions*/
+.caption {
+    margin-bottom: 0.5em;
+}
+
+h4, .caption {
+    z-index: 2;
+    align-self: flex-end;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+span.subcap {
+    font-size: 0.75em;
+    background-color: var(--light);
+    font-style: italic;
+}
+
+a.cap:link {
+    text-decoration: none;
+    color: var(--light);
+}
+
+a.cap:visited {
+    text-decoration: none;
+    color: var(--light);
+}
+/***Sidebar***/
+/* aside.sidebar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    height: 20em;
+    width: 10em;
+    border: 1px solid blue;
+} */
+
+
+/*********Footer***********/
+
+footer {
+    width: 100%;
+    display: flex;
+    align-content: center;
+
+}
+
+.title-foot {
+    border: 1px solid black;
+}
+
+nav#bottom {
+    /* align-self: center; */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-left: 3em;
+}
+
+nav#bottom a {
+    align-self: center;
+    margin: 0 10px;
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark);
+}
+
+nav#bottom a:link {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+nav#bottom a:visited {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+
+
+/************************Mobile********************/
+@media screen and (max-width: 450px){
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+/*header*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+}
+
+h1.top {
+    text-align: center;
+    color: var(--light);
+    background-image: url(./images/wall-bluegreen.jpg);
+    margin-bottom: 1%;
+}
+
+div#bi1 {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    padding: 0 17%;
+}
+
+nav#head {
+    background-color: var(--dark);
+}
+
+nav#head a {
+    align-self: center;
+    margin: 0 5px 5px 5px;
+    background-color: var(--dark);
+    color: var(--light);
+    border-bottom: 2px solid rgb(130, 245, 245);
+}
+
+nav#head a:link {
+    text-decoration: none;
+    color: var(--light);
+}
+
+nav#head a:visited {
+    text-decoration: none;
+    color: var(--light);
+}
+
+
+
+/*main******************************************/
+
+main {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+}
+
+aside.sidebar {
+    display: none;
+}
+
+h1.sb-mobile {
+    width: 100%;
+    text-align: center;
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark);
+}
+/****************About me********/
+section.main-p1{
+    background-color: lightgray;
+    display: inline flex;
+}
+
+
+/*****************Work***********/
+section.main-p{
+    /* width: 80%; */
+    max-width: 400px;
+    max-height: 300px;
+    background-color:lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+section.main-p img{
+    /* width: 80%; */
+    max-width: 400px;
+    max-height: auto;
+    background-color:lightseagreen;
+
+}
+
+div.caption {
+    /* width: 80%; */
+    max-width: 400px;
+    max-height: auto;
+    background-color: lightyellow;
+}
+
+section#sec2 {
+    background: url(./images/first_app.png) no-repeat lightseagreen;
+    background-size: cover;
+}
+
+/* div.work {
+    background-color:lightseagreen;
+    display: inline-flex;
+} */
+
+img.work {
+    width: 100%;
+    flex: 1 1 300px;
+    max-height: 200px;
+    
+    /* background-image: url(./images/first_app.png);
+    background-size: cover; */
+    background-color:lightseagreen;
+}
+
+/* img.work {
+    max-height: 200px
+} */
+
+
+
+/*footer*******************************************/
+nav#bottom a{
+    align-self: center;
+    margin: 0 5px 5px 5px;
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark);
+}
+
+nav#bottom a:link {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+nav#bottom a:visited {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+}
