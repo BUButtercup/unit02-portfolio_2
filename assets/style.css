@@ -31,9 +31,9 @@
 h1.sb-mobile {
     display: none;
 }
-/**************************************/
 
-/***************Desktop***************/
+
+/***************Desktop View***************/
 
 body {
     font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
@@ -46,11 +46,9 @@ header {
     width: 100%;
     background-color: var(--dark);
     display: flex;
-    /* justify-content: space-between; */
 }
-
+/***header h1***/
 h1.top {
-    
     display: flex;
     justify-content: center;
     align-content: center;
@@ -61,7 +59,6 @@ h1.top {
     font-size: 3.5em;
     background-color: var(--light);
     color: var(--dark);
-
 }
 
 div.avatar {
@@ -77,6 +74,7 @@ div.avatar img {
     border: 2px solid var(--dark);
 }
 
+/****nav bar*****/
 div.navig {
     width: 50%;
     align-self: stretch;
@@ -95,7 +93,7 @@ nav#head {
 }
 
 nav#head a {
-    align-self: ;
+    align-self: center;
     margin: 0 5px 5px 5px;
     background-color: var(--dark);
     color: var(--light);
@@ -107,7 +105,8 @@ nav#head a:link {
     color: var(--light);
 }
 
-nav#head a:hover {
+nav#head a:hover,
+nav#head a:active {
     box-shadow: inset 0px 0px 10px 5px magenta;
 }
 
@@ -116,6 +115,7 @@ nav#head a:visited {
     color: var(--light);
 }
 
+/***background image w/ subtitle****/
 div#bi1 {
     display: flex;
     height: 7em;
@@ -140,7 +140,6 @@ div.subtitle {
     width: 66%;
     margin-left: 225px;
     background-color: transparent;
-    /* border: 1px solid black; */
 }
 
 /**********Main*********/
@@ -151,6 +150,7 @@ main {
     height: 100%;
 }
 
+/****main h1s are in a sidebar to left****/
 h1.sb {
     font-size: 3em;
     font-weight: lighter;
@@ -171,14 +171,11 @@ h1.sb {
     width: 225px;
 }
 
-#sb4 {
-    /* margin-bottom: 5px; */
-}
-
 #sb5 {
     margin-top: 10px;
 }
 
+/***About Me paragraph***/
 section.main-p1 {
     display: flex;
     align-items: center;
@@ -187,13 +184,13 @@ section.main-p1 {
 }
 
 p {
-    /* border: 1px solid black; */
     width: 60%;
     margin: 1em 3em;
     padding: 0 0.5em;
     font-size: 1.25em;
 }
 
+/**Work section image links**/
 div.big {
     width: 100%;
     display: flex;
@@ -291,7 +288,7 @@ a.cap:visited {
     color: var(--light);
 }
 
-/*********Footer***********/
+/*********Footer w/ nav***********/
 
 footer {
     width: 100%;
@@ -325,7 +322,8 @@ nav#bottom a:link {
     color: var(--dark);
 }
 
-nav#bottom a:hover {
+nav#bottom a:hover,
+nav#bottom a:active {
     box-shadow: inset 0px 0px 10px 1px magenta;
 }
 
@@ -336,28 +334,35 @@ nav#bottom a:visited {
 
 
 
-/************************Mobile********************/
-@media screen and (max-width: 450px){
+/*****************Tablet / Mobile*******************/
+@media screen and (max-width: 850px){
 
     body {
         display: flex;
         flex-direction: column;
     }
 
-/*header*/
+/*******header w/ nav*******/
 
 header {
     display: flex;
     flex-direction: column;
     background-color: var(--dark);
+    width: 100%;
 }
 
 h1.top {
-    text-align: center;
     color: var(--light);
     background-image: url(./images/wall-bluegreen.jpg);
     margin-bottom: 1%;
+    font-size: 3em;
+    width: 100%
 }
+
+div.avatar {
+    margin: 10px 10px;
+}
+
 
 div#bi1 {
     display: none;
@@ -365,9 +370,14 @@ div#bi1 {
 
 nav {
     display: flex;
-    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
     width: 100%;
-    padding: 0 17%;
+}
+
+div.navig {
+    width: 100%;
 }
 
 nav#head {
@@ -394,101 +404,119 @@ nav#head a:visited {
 
 
 
-/*main******************************************/
+/*************main*************/
 
 main {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        width: 100%;
 }
 
-aside.sidebar {
-    display: none;
-}
-
-h1.sb-mobile {
-    width: 100%;
-    text-align: center;
-    color: var(--dark);
-    border-bottom: 2px solid var(--dark);
-}
-/****************About me********/
+/***About me***/
 section.main-p1{
-    background-color: lightgray;
-    display: inline flex;
+    background-color:lightblue;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
 }
 
+h1.sb {
+    width: 100%;
+    font-size: 2em;
+    font-weight: lighter;
+    border-right: 0;
+    border-bottom: 3px solid var(--dark);
+    display: flex;
+    justify-content:center;
+    text-align: right;
+    align-self: stretch;
+    padding: 0;
+}
 
-/*****************Work***********/
-section.main-p{
-    /* width: 80%; */
-    max-width: 400px;
-    max-height: 300px;
+section.main-p1 p {
+    width: 100%;
+    align-self: stretch;
+    margin: 0;
+    padding-top: 10px;
+}
+
+div.big {
+    display: flex;
+    flex-direction: column;
+}
+/*******Work********/
+section.mob {
+    width:100%;
     background-color:lightseagreen;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-content:flex-start;
+    border: 5px solid var(--light);
+    height: 15em;
+    margin: 0;
+}
+
+#sec2, #sec3, #sec4, #sec5, #sec6 {
+    margin: 0;
+}
+
+a.cap {
+    width: 100%;
+}
+
+div.big {
+    width: 100%;
+    display: flex;
     align-content: center;
 }
-
-section.main-p img{
-    /* width: 80%; */
-    max-width: 400px;
-    max-height: auto;
-    background-color:lightseagreen;
-
-}
-
 div.caption {
-    /* width: 80%; */
-    max-width: 400px;
-    max-height: auto;
-    background-color: lightyellow;
+    align-self: flex-start;
+    background-color: var(--light);
 }
 
-section#sec2 {
-    background: url(./images/first_app.png) no-repeat lightseagreen;
-    background-size: cover;
+#sb3, #sb4 { /*these are place holders*/
+    display: none;
 }
 
-/* div.work {
-    background-color:lightseagreen;
-    display: inline-flex;
-} */
+#si1, #si3 {
+    margin: 1em 0 0 0;
+}
 
-img.work {
+
+.smallboxes1, .smallboxes2 {
+    display: flex;
+    flex-flow: row wrap;
     width: 100%;
-    flex: 1 1 300px;
-    max-height: 200px;
-    
-    /* background-image: url(./images/first_app.png);
-    background-size: cover; */
-    background-color:lightseagreen;
 }
 
-/* img.work {
-    max-height: 200px
-} */
+/*************footer***********/
+footer {
+    flex-direction: column;
+    width: 100%;
+}
 
+nav#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin: 1em 0 2.5em 0;
 
+}
 
-/*footer*******************************************/
 nav#bottom a{
     align-self: center;
     margin: 0 5px 5px 5px;
+    font-size: 1em;
+    font-weight: 700;
     color: var(--dark);
     border-bottom: 2px solid var(--dark);
-}
-
-nav#bottom a:link {
-    text-decoration: none;
-    color: var(--dark);
-}
-
-nav#bottom a:visited {
-    text-decoration: none;
-    color: var(--dark);
 }
 
 }
