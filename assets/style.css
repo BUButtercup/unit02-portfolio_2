@@ -40,6 +40,8 @@ body {
     color:rgb(55, 55, 75);
 }
 
+
+
 /*******Header********/
 
 header {
@@ -219,11 +221,26 @@ div.mainp {
 
 div#big-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50%;
     width: 100%
 }
+
+a.github:link, 
+a.github:visited ,
+a.github:active {
+    /* font-size: 14px; */
+    text-decoration: none;
+    color: var(--dark);
+}
+
+a.github:hover {
+    color: magenta;
+}
+
+
 
 section.main-p:hover {
     box-shadow: inset 0px 0px 70px 5px magenta;
@@ -238,7 +255,8 @@ a.cap {
     border: 5px solid var(--light);
     width: 100%;
     height: 20em;
-    background-image: url(./images/first_app.png);
+    background-image: url(./images/MovieMadness.gif);
+    background-repeat: repeat;
 }
 
 .smallboxes1, .smallboxes2 {
@@ -257,16 +275,17 @@ a.cap {
     margin: 0 1em 0 0;
 }
 
-a.cap2 {
+.cap2 {
     width: 29%;
 }
 
 #sec3 {
-    background-image: url(./images/second_app2.png);
+    background-image: url(./images/weather-dt_gif.gif);
+    background-repeat: repeat;
 }
 
 #sec4 {
-    background-image: url(./images/third_app.png);
+    background-image: url(./images/JS_Quiz.png);
 }
 
 #sec5 {
