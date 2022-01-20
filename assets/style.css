@@ -148,6 +148,7 @@ main {
     display: inline-flex;
     flex-flow: row wrap;
     height: 100%;
+    width: 100%;
 }
 
 /****main h1s are in a sidebar to left****/
@@ -191,7 +192,14 @@ p {
 }
 
 /**Work section image links**/
+#side {
+    height: 100%;
+    width: 225px;
+    border-right: 3px solid var(--dark);
+}
+
 div.big {
+    height: 85vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -201,7 +209,20 @@ section.main-p {
     display: flex;
     border: 5px solid var(--light);
     width: 100%;
-    height: 7em;
+    height: 10em;
+}
+
+div.mainp {
+    width: 100%;
+    height: 100%;
+}
+
+div#big-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%
 }
 
 section.main-p:hover {
@@ -216,15 +237,15 @@ a.cap {
     display: flex;
     border: 5px solid var(--light);
     width: 100%;
-    height: 15em;
+    height: 20em;
     background-image: url(./images/first_app.png);
-    z-index: 1;
-    margin: 0 3em;
 }
 
 .smallboxes1, .smallboxes2 {
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height:25%;
     width: 100%;
 }
 
@@ -233,11 +254,7 @@ a.cap {
 }
 
 #si1, #si3 {
-    margin: 1em 1em 0 3em;
-}
-
-#si2, #si4 {
-    margin-top: 1em; 
+    margin: 0 1em 0 0;
 }
 
 a.cap2 {
@@ -282,7 +299,7 @@ a.cap:link {
     text-decoration: none;
     color: var(--light);
 }
-
+/*  */
 a.cap:visited {
     text-decoration: none;
     color: var(--light);
@@ -437,6 +454,11 @@ h1.sb {
     padding: 0;
 }
 
+#side {
+    width: 100%;
+    border-right: 0;
+}
+
 section.main-p1 p {
     width: 100%;
     align-self: stretch;
@@ -447,9 +469,10 @@ section.main-p1 p {
 div.big {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 /*******Work********/
-section.mob {
+.mob {
     width:100%;
     background-color:lightseagreen;
     display: flex;
@@ -462,7 +485,16 @@ section.mob {
 }
 
 #sec2, #sec3, #sec4, #sec5, #sec6 {
-    margin: 0;
+    margin: 0 10px 10px 10px;
+    padding: 0;
+}
+
+#sec2, #sec4 {
+    margin-bottom: -5px;;
+}
+
+#sec2 {
+    height: 17vh;
 }
 
 a.cap {
