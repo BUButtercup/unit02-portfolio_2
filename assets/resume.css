@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: lightseagreen;
+    background-color:whitesmoke;
 }
 
 body {
@@ -17,6 +17,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px 0;
+    background-color: whitesmoke;
+    border-bottom: 2px solid gray;
 }
 
 nav {
@@ -35,6 +38,7 @@ a:hover {
 
 p {
     width: 100%;
+    margin-left: 0;
 }
 /* ul {
     list-style: ;

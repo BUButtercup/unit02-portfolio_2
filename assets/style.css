@@ -228,6 +228,10 @@ div#big-box {
     width: 100%
 }
 
+.github {
+    height: 20px;
+}
+
 a.github:link, 
 a.github:visited ,
 a.github:active {
@@ -255,8 +259,10 @@ a.cap {
     border: 5px solid var(--light);
     width: 100%;
     height: 20em;
-    background-image: url(./images/MovieMadness.gif);
-    background-repeat: repeat;
+    background-image: url(./images/MovieMadness.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .smallboxes1, .smallboxes2 {
@@ -272,24 +278,30 @@ a.cap {
 }
 
 #si1, #si3 {
-    margin: 0 1em 0 0;
+    margin: 2em 1em 2em 0;
 }
 
 .cap2 {
     width: 34%;
+    margin: 2em 1em 2em 0;
 }
 
 #sec3 {
-    background-image: url(./images/weather-dt_gif.gif);
-    background-repeat: repeat;
+    background-image: url(./images/weather-dt.png);
+    background-position: no-repeat;
+    background-size: cover;
 }
 
 #sec4 {
     background-image: url(./images/JS_Quiz.png);
+    background-position: no-repeat;
+    background-size: cover;
 }
 
 #sec5 {
-    background-image: url(./images/fourth_app.png);
+    background-image: url(./images/emerald_thumb.png);
+    background-position: no-repeat;
+    background-size: cover;
 }
 
 #sec6 {
@@ -367,8 +379,6 @@ nav#bottom a:visited {
     text-decoration: none;
     color: var(--dark);
 }
-
-
 
 /*****************Tablet / Mobile*******************/
 @media screen and (max-width: 850px){
